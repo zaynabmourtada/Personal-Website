@@ -152,8 +152,8 @@ input, select, textarea {
 		}
 
 	body {
-		background-color: #ffffff;
-		color: #000000;
+		background-color: #9F837F;
+		color: #ffffff;
 	}
 
 	body, input, select, textarea {
@@ -332,7 +332,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #000000;
+		color: #ffff;
 	}
 
 	blockquote {
@@ -2187,8 +2187,8 @@ input, select, textarea {
 	button,
 	.button {
 		background-color: transparent;
-		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-		color: #000000 !important;
+		box-shadow: inset 0 0 0 1px white;
+		color: #ffff !important;
 	}
 
 		input[type="submit"]:hover,
@@ -8408,7 +8408,7 @@ input, select, textarea {
 			#wrapper > .invert input[type="checkbox"]:focus + label:before,
 			#wrapper > .invert input[type="radio"]:focus + label:before {
 				border-color: #47D3E5;
-				box-shadow: 0 0 0 1px #47D3E5;
+				box-shadow: 0 0 0 1px hsl(187, 75%, 59%);
 			}
 
 			#wrapper > .invert ::-webkit-input-placeholder {
@@ -8601,3 +8601,18 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+			.details {
+				display: none;
+				margin-top: 10px;
+				color: #fff;
+				background: rgba(0, 0, 0, 0.8);
+				border-radius: 5px;
+				padding: 10px;
+			}
+			
+			input[type="checkbox"]:checked + label + .details {
+				display: block;
+			}
+
+			

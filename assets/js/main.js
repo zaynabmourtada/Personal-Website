@@ -229,15 +229,16 @@
 				.on('click', 'a', function(event) {
 
 					var $a = $(this),
-						$gallery = $a.parents('.gallery'),
-						$modal = $gallery.children('.modal'),
-						$modalImg = $modal.find('img'),
-						href = $a.attr('href');
+                	href = $a.attr('href');
 
-					// Not an image? Bail.
-						if (!href.match(/\.(jpg|gif|png|mp4)$/))
-							return;
+            	// Check if the link is not an image or if it is a GitHub link
+           			if (!href.match(/\.(jpg|gif|png|mp4)$/) || $a.hasClass('button')) {
+                		// Allow the default action (navigation)
+                		return;
+            			}
 
+
+				
 					// Prevent default.
 						event.preventDefault();
 						event.stopPropagation();
@@ -271,7 +272,6 @@
 
 					var $modal = $(this),
 						$modalImg = $modal.find('img');
-
 					// Locked? Bail.
 						if ($modal[0]._locked)
 							return;
@@ -307,8 +307,8 @@
 							}, 475);
 
 						}, 125);
-
 				})
+				
 				.on('keypress', '.modal', function(event) {
 
 					var $modal = $(this);
